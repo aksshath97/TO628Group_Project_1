@@ -98,10 +98,12 @@ lrmodel2 <-glm(prosper_score ~ number_of_days + principal_balance + loan_status 
 summary(lrmodel2)
 ```
 
-# Model 3
+# Model 3 - Includes variables with significant correlation
 
 ```{r}
+lrmodel3 <-glm(prosper_score ~ number_of_days + principal_balance + loan_status + amount_funded + listing_term + listing_monthly_payment + scorex + stated_monthly_income + employment_status_description + dti_wprosper_loan + monthly_debt + lender_indicator + first_recorded_credit_line + inquiries_last6_months + current_credit_lines + bankcard_utilization + total_open_revolving_accounts + real_estate_balance + revolving_balance + revolving_available_percent + total_inquiries + delinquencies_over30_days + delinquencies_over60_days, data = listings)
 
+summary(lrmodel3)
 ```
 
 
